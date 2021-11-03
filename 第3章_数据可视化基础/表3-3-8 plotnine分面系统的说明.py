@@ -9,6 +9,9 @@ Created on Thu Mar 28 22:47:45 2019
 from plotnine import *
 from plotnine.data import mpg
 
+t=(ggplot(mpg, aes('cty', 'hwy', fill='fl'))
+   + geom_point(size=3, stroke=0.3, alpha=0.8, show_legend=False)
+   + scale_fill_hue(s = 0.90, l = 0.65, h=0.0417, color_space='husl'))
 
 t1=(t + facet_grid('.~ fl')
 +theme_matplotlib()
