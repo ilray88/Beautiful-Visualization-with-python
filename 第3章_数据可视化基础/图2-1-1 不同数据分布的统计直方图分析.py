@@ -31,8 +31,8 @@ def Hist_point(x,bin_width=0.3):
  
     return df
 
-df=pd.read_csv('Distribution_Data.csv')
-df['class']=df['class'].astype("category",categories= ["n", "s", "k", "mm"],ordered=True)
+df = pd.read_csv('Distribution_Data.csv')
+df['class'] = df['class'].astype("category", categories=["n", "s", "k", "mm"], ordered=True)
 
 df_all=pd.DataFrame(columns=['x','count','group'])
 mean=[]
